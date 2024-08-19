@@ -1,0 +1,215 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+*,*:before,*:after {
+    box-sizing: border-box;
+  }
+
+img{
+    height: auto;
+    max-width: 100%;
+    vertical-align: middle; /*清除圖片下方2-3px的空白or display:block */
+}
+
+a{
+    text-decoration: none; /* 文字下底線做清除*/
+    color: black; /* 顏色給為黑色*/
+}
+
+/* 導入字體+行高 */
+@import url('https://fonts.googleapis.com/css2?family=Castoro:ital@0;1&display=swap');
+
+body{
+  font-family: "Castoro",serif; /* 引入主要字體與通用字體*/
+  font-size: 24px; /* 此設計稿中占比最多 */
+  line-height: 1.5;
+}
+
+
+/* 網頁外容器 */
+.container{
+    width: 1296px; 
+    /* Layout Grid：12欄*每欄寬86px+每欄間距24px*11個間距=1,296px*/
+    /* 1920px是網頁滿版尺寸，不建議特別設定*/
+    margin: 0 auto; /*區塊元素&有對元素做寬度設定*/
+    padding: 12px; /*寬度會到 1320px，這個作法可以再後續 RWD 的課程內容使用到(因為視覺來說左右不會直接貼齊邊界，當使用 padding 在格局設定就能不用再另外設定其他數值直接實現這個效果)*/
+}
+
+/* H1 + Pic + H2 */
+.vito-title{
+    font-size: 128px;
+    padding-top: 160px;
+    letter-spacing: 0.12em; /*字距,letter-spacing無法設定倍數，要用em(文字大小*0.12倍)*/
+}
+
+/* Pic置中 */
+.photo{
+    text-align:center; /*會作用在內元素上*/
+}
+
+/* H2 靠右*/
+.vito-subtitle{
+    /*text-align:right;*/
+    font-size: 128px;
+    letter-spacing: 0.12em; /*字距,letter-spacing無法設定倍數，要用em(文字大小*0.12倍)*/
+}
+
+/* 自我介紹 */
+.intro{
+    background-color:rgb(239,239,239);
+}
+
+.intro-container p{
+    font-size: 32px;
+    padding: 48px 0;
+}
+
+/*header + intro + exper-container 模組化設定 */
+.text-right{
+    text-align:right;
+}
+
+.w-50{
+    width: 50%;
+}
+
+.ml-auto{
+    margin-left: auto;
+}
+
+/* 經歷 */
+.main-exper{
+    /*background-color:rgb(225, 206, 244);*/
+    padding-top:80px;
+}
+
+.exper-container{
+    padding-bottom:160px;
+}
+
+.exper-context1{
+    padding-bottom:40px;
+}
+
+.exper-context1 h3{
+    font-size: 40px;
+    border-bottom: 3px solid rgb(174,0,0);
+    color:rgb(174,0,0);
+}
+
+.exper-context1 ul{
+    font-size: 24px;
+}
+
+.exper-context1 li{
+    padding-top: 16px;
+    list-style:none;
+}
+
+.exper-context2{
+    padding-bottom:40px;
+}
+
+.exper-context2 h3{
+    font-size: 40px;
+    border-bottom: 3px solid rgb(174,0,0);
+    color:rgb(174,0,0);
+}
+
+.exper-context2 ul{
+    font-size: 24px;
+}
+
+.exper-context2 li{
+    list-style:none;
+    padding-top: 16px;
+}
+
+.exper-context2 .years-item{
+    color:rgb(148,148,148);
+    font-size: 20px;
+    font-style: Italic;
+}
+
+/*exper-container 模組化設定 */
+/*mb-2=通常以4或8為單位=>margin-bottom: 8px; */
+.mb-2{
+    margin-bottom: 8px;
+}
+
+/*mb-3=通常以4或8為單位=>margin-bottom: 12px; */
+.mb-3{
+    margin-bottom: 12px;
+}
+
+/*mb-4=通常以4或8為單位=>margin-bottom: 16px; */
+.mb-4{
+    margin-bottom: 16px;
+}
+
+/* Footer + Media */
+.footer-container{
+    background: black;
+}
+
+.footer-container ul{
+    text-align: center;
+}
+
+.footer-container li{
+    display: inline;
+    margin-left: 40px;
+}
+
+.footer-container img{
+    max-width: 100%;
+    padding-top: 64px;
+    padding-bottom: 64px;
+    
+}
